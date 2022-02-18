@@ -1,0 +1,39 @@
+@use '../helpers-scss/media-queries.scss' as *;
+@use '../helpers-scss/mixins.scss' as *;
+
+.localMultiplayer-start {
+  position: relative;
+  @include centerWrapperPage;
+
+  &__title {
+    @include titlePage;
+  }
+
+  &__title-sign {
+    margin-bottom: 15px;
+    @include titlePage;
+  }
+
+  &__input {
+    margin: 10px 0 15px;
+    @include inputStyles;
+  }
+
+  &__wrapper-btns {
+    @include btnsWrapper;
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    @include btnStyles;
+  }
+
+  &__btn-start {
+    @include btnStart;
+    margin-bottom: 20px;
+  }
+
+  &__top {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+@use '../helpers-scss/media-queries.scss' as *;
+@use '../helpers-scss/mixins.scss' as *;
+
+.single-player-start-page {
+  position: relative;
+  @include centerWrapperPage;
+
+  &__title {
+    @include titlePage;
+
+    &--second {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    @include inputStyles;
+  }
+
+  &__wrapper-btns {
+    @include btnsWrapper;
+  }
+
+  &__btn {
+    @include btnStyles;
+    text-transform: uppercase;
+  }
+
+  &__btn-start {
+    @include btnStart;
+  }
+}
