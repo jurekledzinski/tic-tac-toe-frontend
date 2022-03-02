@@ -18,6 +18,7 @@ Build with:
 - [ExpressJS](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js.
 - [Mongoose](https://mongoosejs.com/) - Elegant MongoDB object modeling for Node.js.
 - [Webpack](https://webpack.js.org/) - bundle assets, style, scripts, images ...
+- [Socket.io](https://socket.io/) - Bidirectional and low-latency communication for every platform.
 
 #### See live
 
