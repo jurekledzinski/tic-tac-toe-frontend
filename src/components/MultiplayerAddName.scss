@@ -1,0 +1,28 @@
+@use '../helpers-scss/media-queries.scss' as *;
+@use '../helpers-scss/mixins.scss' as *;
+@use '../helpers-scss/variables.scss' as *;
+
+.multiplayer-name-page {
+  position: relative;
+  @include centerWrapperPage;
+
+  &__wrapper {
+    width: 100%;
+    min-height: inherit;
+  }
+
+  &__title {
+    @include titlePage;
+  }
+
+  &__input {
+    margin: 10px 0 15px;
+    @include inputStyles;
+  }
+
+  &__search {
+    display: block;
+    width: 100%;
+    @include btnStart;
+  }
+}

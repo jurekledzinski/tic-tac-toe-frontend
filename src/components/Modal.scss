@@ -1,0 +1,20 @@
+@use '../helpers-scss/media-queries.scss' as *;
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #240b36;
+  z-index: 1;
+
+  &--multiplayer,
+  &--response {
+    align-items: flex-end;
+    background-color: transparent;
+  }
+}

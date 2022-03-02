@@ -1,0 +1,142 @@
+@use '../helpers-scss/media-queries.scss' as *;
+@use '../helpers-scss/mixins.scss' as *;
+@use '../helpers-scss/variables.scss' as *;
+
+.play-game {
+  @include centerWrapperPage;
+  color: $color-font-text;
+  &__result-wrapper {
+    width: 100%;
+    background-color: blue;
+  }
+
+  &__users,
+  &__signs,
+  &__wins {
+    width: 100%;
+  }
+
+  &__users,
+  &__signs,
+  &__wins {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user,
+  &__sign,
+  &__win {
+    width: 33.3%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: $font-family-text;
+    font-weight: 300;
+  }
+
+  &__sign {
+    font-family: $font-family-letter;
+    font-weight: 900;
+
+    &--x {
+      color: #ff4136;
+    }
+
+    &--o {
+      color: #ffc107;
+    }
+  }
+
+  &__board-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__move {
+    width: 100%;
+    margin: 30px 0 10px 0;
+    font-size: 1.4rem;
+    font-family: $font-family-text;
+    font-weight: 300;
+
+    @include media-queries(xxsmall) {
+      width: 210px;
+    }
+  }
+
+  &__board-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 3px;
+    width: 100%;
+    border-radius: 4px;
+
+    @include media-queries(xxsmall) {
+      width: 210px;
+      grid-template-columns: repeat(3, 67px);
+      grid-template-rows: repeat(3, 67px);
+    }
+  }
+
+  &__box {
+    height: 55px;
+    border: 1px solid #402b85;
+    outline: none;
+    background-color: #0e0912;
+    color: #333;
+    font-size: 2rem;
+    transition: 1.2s linear;
+    cursor: pointer;
+
+    @include media-queries(xxsmall) {
+      width: 67px;
+      height: 67px;
+    }
+
+    &:disabled {
+      background-color: #0e0912;
+    }
+
+    &--active-1 {
+      background-color: #402b85 !important;
+      transition-delay: 0s;
+    }
+
+    &--active-2 {
+      background-color: #402b85 !important;
+      transition-delay: 0.4s;
+    }
+
+    &--active-3 {
+      background-color: #402b85 !important;
+      transition-delay: 0.8s;
+    }
+
+    &:hover {
+      border: 2px solid #0e0912;
+    }
+  }
+
+  &__box-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 3.4rem;
+    color: #ff4136;
+    font-weight: 900;
+  }
+
+  &__box-value--o {
+    color: #ffc107;
+  }
+}
